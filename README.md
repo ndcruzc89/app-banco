@@ -1,7 +1,7 @@
 # APP BANCO
 
 ## ¿Qué es App Banco?
-Es una aplicación web bancaria en la cual el cliente podrá manejar sus cuentas y transacciones de una forma óptima, confiable y segura. El objetivo es que pueda tener al alcance el estado de cada una de sus cuentas, y también que pueda realizar depósitos a través de estas a otras cuentas ya sean internas o externas; y además, que pueda realizar retiros en puntos seguros y supervisados. 
+Es una aplicación web bancaria totalmente responsive, llamada EsTUBANCO, en la cual el cliente podrá manejar sus cuentas y transacciones de una forma óptima, confiable y segura. El objetivo es que pueda tener al alcance el estado de cada una de sus cuentas, y también que pueda realizar depósitos a través de estas a otras cuentas ya sean internas o externas; y además, que pueda realizar retiros en puntos seguros y supervisados. 
 
 La aplicación está dividida en las siguientes interfaces:
 - Interfaz de Login: el usuario podrá iniciar sesión para ingresar a la aplicación. Al iniciar sesión correctamente ingresará a la interfaz de Home.
