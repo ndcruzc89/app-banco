@@ -1,0 +1,38 @@
+# Ignore dependencies and build artifacts
+client/node_modules
+client/build
+server/target
+server/!.mvn/wrapper/maven-wrapper.jar
+
+# Ignore IDE-specific files
+client/.idea
+client/*.iws
+client/*.iml
+client/*.ipr
+server/.apt_generated
+server/.classpath
+server/.factorypath
+server/.project
+server/.settings
+server/.springBeans
+server/.sts4-cache
+server/.idea
+server/*.iws
+server/*.iml
+server/*.ipr
+server/nbproject/private/
+server/nbbuild/
+server/dist/
+server/nbdist/
+server/.nb-gradle/
+server/.vscode/
+
+# Ignore misc files
+client/.DS_Store
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*

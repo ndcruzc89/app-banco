@@ -1,0 +1,35 @@
+.home-container {
+    margin-top: 7rem;
+}
+
+.home-header i {
+    font-size: 2rem;
+    color: #005a8d;
+}
+
+.home-title {
+    color: #081541;
+    font-size: 2.5rem;
+}
+
+.home-title span {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
+.deposit-btn {
+    background: #005a8d;
+}
+
+.withdrawal-btn {
+    background: #8a2be2;
+
+}
+
+
+@media (max-width: 576px) {
+    .home-header i{
+        font-size: 3rem;
+    }
+  }

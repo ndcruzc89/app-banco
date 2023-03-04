@@ -1,0 +1,80 @@
+@startuml "Diagrama relacional"
+
+entity cliente {
+    id long <<PK>>
+    --
+    nombre varchar(50) <<NN>>
+    apellido varchar(50) <<NN>>
+    documento varchar(20) <<NN>> <<UQ>>
+    email varchar(50) <<NN>> <<UQ>>
+    contrasena varchar(20) <<NN>> 
+    fecha_nacimiento date <<NN>> 
+    telefono varchar(50) <<NN>> 
+}
+
+entity cuenta_interna {
+    id long <<PK>>
+    --
+    num_cuenta varchar(20) <<NN>> <<UQ>>
+    saldo_disp decimal <<NN>>
+    --
+    id_cliente <<NN>> <<FK>> 
+    id_tipocuenta <<NN>> <<FK>> 
+}
+
+entity tipo_cuenta {
+    id long <<PK>>
+    descripcion varchar(20) <<NN>>
+}
+
+entity transaccion {
+    id long <<PK>>
+    --
+    monto decimal <<NN>>
+    fecha timestamp <<NN>>
+    mismo_banco bit(1) <<NN>>
+    --
+    id_cliente <<NN>> <<FK>> 
+    id_cuentaorigen <<NN>> <<FK>> 
+    id_tipotransaccion <<NN>> <<FK>> 
+    id_cuentadestino_interno <<FK>>
+    id_cuentadestino_externo <<FK>>
+    id_puntoretiro <<FK>> 
+}
+
+entity tipo_transaccion {
+    id long <<PK>>
+    --
+    descripcion varchar(20) <<NN>>
+}
+
+entity cuenta_externa {
+    id long <<PK>>
+    --
+    num_cuenta varchar(20)  <<NN>> <<UQ>>
+    id_banco <<NN>> <<FK>> 
+}
+
+entity banco {
+    id long <<PK>>
+    --
+    nombre varchar(50) <<NN>>
+}
+
+
+entity punto_retiro {
+    id long <<PK>>
+    --
+    nombre varchar(50) <<NN>>
+}
+
+cliente ||-right-|{ cuenta_interna
+cliente ||-down-|{ transaccion
+cuenta_interna ||--|{ transaccion
+cuenta_interna }|-right-|| tipo_cuenta
+transaccion }|-right-|| tipo_transaccion
+transaccion }|--|| cuenta_externa
+cuenta_externa }|--|| banco
+transaccion }|--|| punto_retiro
+
+@enduml
