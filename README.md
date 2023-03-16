@@ -54,7 +54,7 @@ La estructura de carpetas y rutas de la aplicación puede consultar el apartado 
 La documentación relacionada con el desarrollo del frontend se encuentra en la ruta ***docs\desarrollo\frontend_doc\frontend_doc.md***
 
 ### Backend (API):
-La documentación relacionada con el desarrollo del backend se encuentra en la ruta ***docs\desarrollo\database_doc\database_doc.md***
+La documentación relacionada con el desarrollo del backend se encuentra en la ruta ***docs\desarrollo\backend_doc\backend_doc.md***
 
 ### Base de datos
 La documentación relacionada con el desarrollo de la base de datos se encuentra en la ruta ***docs\desarrollo\database_doc\database_doc.md***
