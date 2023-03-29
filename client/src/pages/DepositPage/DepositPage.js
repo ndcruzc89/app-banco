@@ -4,6 +4,7 @@ import "./DepositPage.css";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useLocation, useNavigate } from "react-router-dom";
+import config from '../../config/config';
 
 import AmountInput from "../../components/AmountInput/AmountInput";
 import ApprovalModal from "../../components/ApprovalModal/ApprovalModal";
@@ -232,7 +233,7 @@ function DepositPage() {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     };
-    const url = "http://localhost:8081/api/transaction/deposit";
+    const url = `${config.API_URL}/api/transaction/deposit`;
     const response = await axios.post(url, dataDeposit, { headers });
     return response.data;
   }

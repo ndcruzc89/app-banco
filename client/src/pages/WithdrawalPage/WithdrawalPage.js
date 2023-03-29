@@ -4,6 +4,7 @@ import "./WithdrawalPage.css";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useLocation, useNavigate } from "react-router-dom";
+import config from '../../config/config';
 
 import AmountInput from "../../components/AmountInput/AmountInput";
 import ApprovalModal from "../../components/ApprovalModal/ApprovalModal";
@@ -118,7 +119,7 @@ function WithdrawalPage() {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     };
-    const url = "http://localhost:8081/api/transaction/withdrawal";
+    const url = `${config.API_URL}/api/transaction/withdrawal`;
     const response = await axios.post(url, dataWithdrawal, { headers });
     return response.data;
   }

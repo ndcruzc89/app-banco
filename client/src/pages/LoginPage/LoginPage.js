@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./LoginPage.css";
+import config from '../../config/config';
 
 import ActionButton from "../../components/ActionButton/ActionButton";
 import LoginTextInput from "../../components/LoginTextInput/LoginTextInput";
@@ -39,7 +40,7 @@ function LoginPage() {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     };
-    let url = "http://localhost:8081/api/login";
+    let url = `${config.API_URL}/api/login`;
     return axios
       .post(url, user, { headers })
       .then((res) => {

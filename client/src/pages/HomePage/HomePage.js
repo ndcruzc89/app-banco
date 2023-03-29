@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import config from '../../config/config';
 
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -25,7 +26,7 @@ function HomePage() {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     };
-    let url = "http://localhost:8081/api/account/" + user.id;
+    let url = `${config.API_URL}/api/account/` + user.id;
     axios
       .get(url, { headers })
       .then((res) => {
